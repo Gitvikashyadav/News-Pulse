@@ -2,7 +2,8 @@ const Api_key = "f9a850128ef84dde9e0794fae855f185";
 const api = "F41u38k03rijq-uHERJH6eEFHa93EahCN09xhYnWmLTAYV0-";
 const url = "https://newsapi.org/v2/everything?q=";
 const url2 = "https://api.currentsapi.services/v1/latest-news?";
-
+const url3="https://content.guardianapis.com/search?";
+const api3="10882b1e-03cd-4fe4-982d-bef75fb5d269";
 window.addEventListener("load", () => fetchNews("India"));
 
 function reload() {
@@ -11,7 +12,7 @@ function reload() {
 }
 
 async function fetchNews(query) {
-  const res = await fetch(`${url2}${query}&apiKey=${api}`);
+  const res = await fetch(`${url3}${query}&apiKey=${api3}`);
   const data = await res.json();
   console.log(data);
   bindData(data.articles);
