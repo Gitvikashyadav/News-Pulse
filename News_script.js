@@ -14,6 +14,7 @@ function reload() {
 async function fetchNews(query) {
   // const res = await fetch(`${url3}${query}&api-key=${api3}`);
   const res = await fetch(`/api/guardian?query=${query}`);
+
   const data = await res.json();
   console.log(data);
   bindData(data.articles);
